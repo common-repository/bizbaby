@@ -1,0 +1,51 @@
+.bizbaby-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #D84560;
+  border: none;
+  border-radius: 2px;
+  width: 12.5rem;
+  height: 3.75rem;
+  cursor: pointer;
+  margin-bottom: 1.125rem;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+  &.thin {
+    width: 18.5rem;
+    height: 2.75rem;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+hr {
+  background-color: $color__text-screen;
+  border: 0;
+  height: 1px;
+  margin: 2em 0;
+}
+
+.shortcode-list {
+  margin-right: 20px;
+  li {
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 700px) {
+  .bizbaby-btn {
+    &.thin {
+      width: 100%;
+    }
+  }
+}

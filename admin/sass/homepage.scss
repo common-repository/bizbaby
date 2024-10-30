@@ -1,0 +1,219 @@
+.content__ {
+  &header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4.24rem;
+
+    &-wrapper {
+      &-box {
+        font-style: normal;
+        margin-left: 0.5em;
+        margin-top: 1.688rem;
+        display: flex;
+        flex-direction: column;
+
+        &-group {
+          display: flex;
+          gap: 50px;
+
+          a {
+            text-decoration: none;
+          }
+        }
+
+        & p {
+          margin-bottom: 1.875rem;
+        }
+
+        &-free {
+          display: flex;
+          flex-direction: row;
+        }
+
+        &-background {
+          max-width: 763px;
+          background: url("../img/main_background.png") no-repeat;
+
+          display: inline-block;
+          height: 631px;
+          width: 39.75vw;
+          border-radius: 0;
+        }
+
+        &-free {
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 34px;
+          color: #1A1A1A;
+
+          a {
+            color: #D84560;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-decoration-line: underline;
+          }
+          &.first {
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+          }
+          &.second {
+            margin-bottom: 1rem;
+          }
+          &-icon {
+            padding-left: 2rem;
+            padding-right: 2.5rem;
+            background: url("../img/check-fill.png") left center no-repeat;
+          }
+        }
+
+        &-title {
+          font-weight: 500;
+          font-size: 48px;
+          line-height: 66px;
+          color: #000000;
+
+          margin-bottom: 1.875rem;
+        }
+
+        &-desc {
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 34px;
+          color: #1A1A1A;
+
+          max-width: 40.625rem;
+          margin-bottom: 4.375rem;
+        }
+
+        &-service {
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 1.125rem;
+          gap: 2.813rem;
+
+          &-item {
+            display: flex;
+            flex-direction: row;
+
+            &-img {
+              width: 2.25rem;
+              height: 2.25rem;
+            }
+
+            &-text {
+              margin-left: 0.875rem;
+              max-width: 19.375rem;
+              width: 100%;
+
+              &-title {
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 34px;
+                color: #1A1A1A;
+                margin-bottom: 0.625rem;
+              }
+
+              &-desc {
+                width: 18.813rem;
+
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                color: #1A1A1A;
+
+                &:last-child {
+                  width: 18.813rem;
+                }
+              }
+            }
+
+            &:last-child {
+              max-width: 21.875rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &instruction {
+    width: 800px;
+    margin: auto;
+
+    &-title {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    &-list {
+      ol {
+        padding: 0;
+        margin: 16px;
+        list-style: decimal;
+
+        li {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: -0.32px;
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1450px) {
+  .content__ {
+    &instruction {
+      width: unset;
+      margin: unset;
+    }
+    &header {
+      flex-direction: column;
+
+      &-wrapper {
+        &-box {
+          &-background {
+            max-width: initial;
+            width: 100%;
+            -webkit-clip-path: none;
+            clip-path: none;
+            background-position: center;
+            background-size: cover;
+          }
+          &-group {
+            flex-direction: column;
+          }
+
+          &-service {
+            flex-direction: column;
+            margin-bottom: 20px;
+
+            &-item {
+              &-text {
+                &-desc {
+                  width: unset;
+
+                  &:last-child {
+                    width: unset;
+                  }
+                }
+
+                &:last-child {
+                  max-width: unset;
+                }
+              }
+            }
+
+
+          }
+        }
+      }
+    }
+  }
+}

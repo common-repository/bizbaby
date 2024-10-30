@@ -1,0 +1,161 @@
+.bizbaby-root {
+  font-size: 16px !important;
+  margin: 15px;
+  color: $color__text-screen;
+}
+
+.bizbaby-container {
+  font-family: $font__main;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 0 0 0 40px;
+  border-radius: 5px;
+  text-align: left;
+  min-height: 600px;
+  overflow: hidden;
+  border: 1px solid #D0D0D0;
+}
+
+.page-title {
+  margin: 35px 0 18px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.bizbaby-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+
+
+@media (min-width: 1600px) {
+  .bizbaby-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cabinet {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .appointments {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .job-requests {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  .login {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  .contact-form {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+}
+
+.bizbaby-card {
+  border: 1px solid #D0D0D0;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 30px 40px;
+  max-width: 780px;
+  min-height: 230px;
+
+  .plan-lock {
+    font-size: 0.688rem;
+    color: #818181;
+    a {
+      color: #818181;
+      text-decoration: unset;
+    }
+
+    &:before {
+      margin-right: 7px;
+      content: url("../img/lock.svg");
+    }
+  }
+
+  &__content {
+    &.lock {
+      opacity: 0.2;
+      pointer-events: none;
+     a {
+       pointer-events: all;
+     }
+    }
+  }
+
+  &__title {
+    h2 {
+      margin: 0;
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 500;
+    }
+  }
+
+  &__columns {
+    margin-top: 20px;
+    gap: 30px;
+    display: flex;
+
+    .card-column {
+      width: 300px;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      min-height: 190px;
+
+      a {
+        font-weight: 500;
+        text-decoration-line: underline;
+        color: #000;
+      }
+
+      &__content {
+        p {
+          font-size: 1rem;
+          font-weight: 400;
+          margin: 0 0 1.5rem 0;
+        }
+      }
+
+      &__install {
+        align-self: end;
+
+        button {
+          margin-top: 15px;
+          border-radius: 2px;
+          border: 1px solid $color__main_red;
+          background: $color__button_light-background;
+          color: $color__main_red;
+          font-size: 0.875rem;
+          padding: 9px 15px;
+          cursor: pointer;
+
+          &:hover {
+            background: $color__main_red;
+            color: $color__link-hover;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1450px) {
+  .bizbaby-container {
+    overflow: unset;
+  }
+}
+
+@media (max-width: 720px) {
+  .bizbaby-cards {
+    grid-template-rows: unset;
+  }
+
+  .bizbaby-card__columns .card-column {
+    width: unset;
+  }
+  .bizbaby-card__columns {
+    display: unset;
+  }
+}
